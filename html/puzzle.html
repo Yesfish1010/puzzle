@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html lang="zh-TW ">
+<meta charset="utf-8"/>
+<!DOCTYPE html>
+
+<head>
+    <title>&#9733; 專題網站 &#9733;</title>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" type="text/css" href="./css/puzzle.css"/>
+</head>
+
+<body>
+    
+    <main>
+        <script src="timer.js"></script>
+        <div class="progessbar">
+            <div class="text"></div>
+            <div class="bar"></div>
+        </div>
+        
+    <br>
+    <div class="horizontal">
+        請遵照流程：
+        <div class="box">
+            <p><h2>閱讀說明</h2></p>
+            <div class="arrow"></div>
+        </div>
+        <div class="box">
+            <p><h2>玩遊戲！</h2></p>
+            <div class="arrow"></div>
+        </div>
+        <div class="box">
+            <p><h2>填問卷！</h2></p>
+            </div>
+        </div>
+    </div>
+  
+    <hr color="black"></hr>
+
+    <div class="left" style="color: blue">
+        <h2>關於我們</h2>
+        大家好！<br>
+        我們是成功大學工業與資訊管理系的大三學生
+    </div>
+
+    <div class="right">
+        <h2>操作說明</h2>
+        <table border="1" style="border-radius: 0cqb;">
+            <tr>
+                <caption>小朋友下樓梯</caption>
+                <td>時間</td>
+                <td>方法</td>
+            </tr>
+            <tr>
+                <td>180秒</td>
+                <td>左右鍵操控</td>
+            </tr>
+        </table>
+    </div>
+    
+    <canvas id="background" width="450px" height="450px"></canvas>
+ 
+    
+    <div id="block" class="center"></div>
+    <!--
+    <div id="block" class="left"></div>
+    -->
+    <script type="text/javascript">
+
+        //var background = document.getElementById("puzzle");
+        //var context = background.getContext('2d');
+        
+        let intervalId;
+         
+
+        const block = document.getElementById("block");
+        let YcurrentPosition = 0;
+        let XcurrentPosition = 0;
+
+        function moveUp() {
+        if (YcurrentPosition == -500){
+            XcurrentPosition = 0;
+            YcurrentPosition = 0;
+        }
+        YcurrentPosition -= 10;
+        block.style.top = YcurrentPosition + "px";
+        }
+
+        function moveLeft() {
+        if (YcurrentPosition == -500) {
+            XcurrentPosition = 0;
+            YcurrentPosition = 0;
+        }
+        XcurrentPosition -= 15;
+        block.style.left = XcurrentPosition + "px";
+        }
+
+        function moveRight() {
+        if (YcurrentPosition == 500) {
+            XcurrentPosition = 0;
+            YcurrentPosition = 0;
+        }
+        XcurrentPosition += 15;
+        block.style.left = XcurrentPosition + "px";
+        }
+
+        setInterval(moveUp, 100); // 調整速度
+
+        document.addEventListener("keydown", function(event) {
+        if (event.code === "ArrowLeft") {
+            intervalId = moveLeft();
+        } else if (event.code === "ArrowRight") {
+            intervalId = moveRight();
+        }
+        if (XcurrentPosition <=-500 || XcurrentPosition >=500){
+            clearInterval(intervalId);
+        }
+        });
+
+        
+
+
+    </script>
+
+    <hr></hr>
+    <div id="floatFrame1">創建第一個浮動方框</div>
+    <div id="floatFrame2">創建第二個浮動方框</div><br>
+    <a href="https://www.surveycake.com/" target="frame_name">
+        <h3>問卷連結</h3></a>
+    <div id ="hi"><b>測試按鈕</b></div>
+        <input type="button" value="click" 
+        onclick="alert(document.getElementById('hi').innerText)">
+        
+    <p> <h4>這是標題4</h4> </p>
+    <hr></hr>
+    元素：<br>
+    1. 標題<br>
+    2. 介紹<br>
+    3. 問卷連結<br>
+    4. 說明<br>
+    5. 遊戲主體<br>
+    <br>
+    <br>
+
+    
+</main>
+    
+</body>
+
+<script src="./js/puzzle.js"></script>
+
+<footer>
+    <center>
+    <div class="center" style="color: #f0f0f0;">
+    學校：成功大學工業與資訊管理學系<br>
+    作者：黃嬂云 H34096259<br>
+    聯絡資訊： 0927XXXXXXX<br>
+    </div>
+    </center>
+</footer>
+
+</html>

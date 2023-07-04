@@ -1,0 +1,178 @@
+canvas {
+    display: block;
+    margin: 50px auto;
+    box-shadow: -2px -2px 2px #efefef, 5px 5px 5px #b9b9b9;
+    cursor: pointer;
+    background-color: #eeeeee;
+}
+
+title {
+    text-align: center;
+    font-weight: bold;
+}
+  
+body {
+    background-color: #D1E9E9;
+    margin-left: 0px;
+    margin-right: 0px;
+    margin-top: 0px;
+
+}
+
+main {
+    margin-left: 20px;
+    margin-right: 20px;
+}
+
+
+footer {
+    background-color: #5CADAD;
+    margin-left: 0;
+    margin-right: 0;
+    padding: 20px;
+    transition: background-color 0.1s;
+}
+footer:hover {
+background-color: #408080;
+}
+
+
+p {font-size: medium; 
+color: rgb(196, 198, 197)}
+
+h2 {font-size: medium; 
+color: rgb(10, 11, 12)}
+
+.box {
+position: relative;
+width: 200px;
+padding: 10px;
+background-color: #f0f0f0;
+border: 1px solid #f0f0f0;
+border-radius: 5px;
+text-align: center;
+margin: 0 10px; /*添加10px的水平間距*/
+}
+
+.arrow {
+position: absolute;
+top: 50%;
+left: 100%;
+margin-top: -10px;
+border-top: 10px solid transparent;
+border-left: 10px solid #f0f0f0;
+border-bottom: 10px solid transparent ;
+
+}
+
+
+/* 將左側文本區域設置為浮動在左側 */
+.left {
+    float: left;
+    width: 25%;
+}
+
+/* 將右側文本區域設置為浮動在右側 */
+.right {
+    float: right;
+    width: 25%;
+}
+
+/* 將圖片設置為居中顯示 */
+/* .center {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    width: 50%;
+} */
+
+.horizontal {
+    display: flex;
+    justify-content: center; /*水平置中*/
+    align-items: center; /*垂直置中*/
+    height: 100%; /*設置高度*/
+    max-width: 1200px;
+    margin: 0 auto;
+    height: auto;
+    overflow: hidden;
+    position: relative;
+}
+
+
+#block {
+    width: 50px;
+    height: 20px;
+    background-color: rgb(93, 70, 143);
+    position: relative;
+}
+
+#floatFrame1 {background-color: aquamarine;
+    float: left;
+}
+
+#floatFrame2 {background-color:rgb(186, 247, 115);
+    float: right;
+}
+
+  
+
+nav {
+    background-image: url("nav_img.jpg");
+    opacity: 0.6;
+    margin-left: 0px;
+    margin-right: 0px;
+    background-color: #95CACA;
+    border-bottom: 10px solid 	#D1E9E9;
+    height: 40px;
+}
+
+nav ul {
+  display: flex;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+nav a {
+  color: #010000;
+  text-decoration: none;
+  font-size: 15px;
+  font-weight: bold;
+  margin-right: 20px;
+  padding: 10px;
+  display: inline-block;
+}
+
+nav a:hover {
+  background-color: #408080;
+}
+
+nav a:first-child {
+  margin-left: 50px;
+  text-align: center;
+}
+
+.progessbar {
+      position: relative;
+      text-align: center;
+      border: 1px solid blue;
+      height: 16px;
+      width: 250px;
+}
+
+.progessbar .text {
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 100%;
+  line-height: 16px;
+  z-index: 10;
+}
+
+.progessbar .bar {
+  position: absolute;
+  left: 0;
+  top: 0;
+  height: 16px;
+  background-color: rgb(158, 186, 158);
+}
